@@ -1,12 +1,13 @@
-#include "ClapTrap.hpp"
+//#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include <iostream>
 
 
 int	main( void )
 {
-	ClapTrap a;
-	ClapTrap b("clap");
-	ClapTrap c(b);
+	ScavTrap a;
+	ScavTrap b("clap");
+	ScavTrap c(b);
 
 	std::cout << a;
 	std::cout << b;
@@ -18,10 +19,10 @@ int	main( void )
 	for(int i = 11; i > 0; i--)
 		a.attack("Trap");
 	for(int i = 11; i > 0; i--)
-		b.takeDamage(1);
+		b.takeDamage(10);
 	b.beRepaired(100);
 	std::cout << b;
 	a.beRepaired(100);
-
+	a.guardGate();
 	return 0;
 };

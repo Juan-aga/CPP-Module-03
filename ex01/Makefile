@@ -6,7 +6,7 @@
 #    By: juan-aga <juan-aga@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/01 11:56:44 by juan-aga          #+#    #+#              #
-#    Updated: 2023/10/15 14:05:43 by juan-aga         ###   ########.fr        #
+#    Updated: 2023/10/15 14:51:12 by juan-aga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,9 @@ SRC_DIR		=	src/
 
 OBJ_DIR		=	obj/
 
-F_SRC		=	main.cpp	\
-				ClapTrap.cpp
+F_SRC		=	main.cpp			\
+				ClapTrap.cpp		\
+				ScavTrap.cpp
 
 SRC			=	${addprefix $(SRC_DIR), $(F_SRC)}
 
@@ -31,7 +32,8 @@ OBJ			=	${patsubst $(SRC_DIR)%.cpp, $(OBJ_DIR)%.opp, $(SRC)}
 
 INCLUDES	=	-I./inc/
 
-HEADERS		=	inc/ClapTrap.hpp
+HEADERS		=	inc/ClapTrap.hpp	\
+				inc/ScavTrap.hpp
 
 ifdef DEBUG
 	DEBUG	=	1

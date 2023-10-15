@@ -51,10 +51,12 @@ void			ClapTrap::takeDamage( unsigned int amount )
 		this->_hitPoints = 0;
 	else
 		this->_hitPoints -= amount;
-	std::cout << "ClapTrap " << this->_name << " take " << amount;
-	std::cout << " points of damage!" << std::endl;
 	if (DEBUG)
+	{
 		std::cout << *this;
+		std::cout << "ClapTrap " << this->_name << " take " << amount;
+		std::cout << " points of damage!" << std::endl;
+	}
 }
 
 void			ClapTrap::beRepaired( unsigned int amount )
@@ -63,13 +65,13 @@ void			ClapTrap::beRepaired( unsigned int amount )
 		std::cout << this->_name << " can't be reapaired!" << std::endl;
 	else
 	{
-		if (amount + this->_hitPoints > CLAP_TRAP_HEALTH)
-			this->_hitPoints = CLAP_TRAP_HEALTH;
-		else
-			this->_hitPoints += amount;
+		this->_hitPoints += amount;
 		this->_energyPoints--;
-		std::cout << "ClapTrap " << this->_name << " has been repaired with ";
-		std::cout << amount << " hit points!" << std::endl;
+		if (DEBUG)
+		{
+			std::cout << "ClapTrap " << this->_name << " has been repaired with ";
+			std::cout << amount << " hit points!" << std::endl;
+		}
 	}
 	if (DEBUG)
 		std::cout << *this;

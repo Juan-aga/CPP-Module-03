@@ -5,7 +5,7 @@
 
 # define FLAG_TRAP_HEALTH 100
 
-class FlagTrap : public ClapTrap
+class FlagTrap : virtual public ClapTrap
 {
 public:
 	FlagTrap( void );

@@ -5,7 +5,7 @@
 
 # define SCAV_TRAP_HEALTH 100
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 public:
 	ScavTrap( void );
@@ -17,6 +17,10 @@ public:
 
 	void	guardGate( void );
 	void	attack( std::string const & name );
+
+protected:
+	static const int	_energy = 50;
+
 };
 
 #endif

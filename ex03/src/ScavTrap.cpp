@@ -15,6 +15,8 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name)
 	this->_attackDamage= 20;
 
 	std::cout << "ScavTrap string constructor called." << std::endl;
+	if(DEBUG)
+		std::cout << *this;
 }
 
 ScavTrap::ScavTrap( ScavTrap const & s ) : ClapTrap(s)
@@ -47,7 +49,10 @@ void			ScavTrap::attack( const std::string & target )
 		std::cout << std::endl;
 	}
 	if (DEBUG)
+	{
 		std::cout << *this;
+		std::cout << "Real energy: " << this->_energyPoints << std::endl;
+	}
 }
 
 ScavTrap &	ScavTrap::operator=( ScavTrap const & s )

@@ -14,6 +14,8 @@ ClapTrap::ClapTrap( std::string name ) : _hitPoints(CLAP_TRAP_HEALTH), _energyPo
 		name = "Anonymous";
 	this->_name = name;
 	std::cout << "String constructor called." << std::endl;
+	if (DEBUG)
+		std::cout << *this;
 }
 
 ClapTrap::ClapTrap( ClapTrap const & c )

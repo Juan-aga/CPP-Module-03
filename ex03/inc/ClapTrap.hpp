@@ -27,7 +27,7 @@ public:
 
 	std::string	getName( void ) const;
 	void		getStatus( unsigned int stats[3] ) const;
-		
+
 };
 
 std::ostream &	operator<<( std::ostream & o, ClapTrap const & c );

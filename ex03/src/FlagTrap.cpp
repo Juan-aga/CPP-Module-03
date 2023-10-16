@@ -15,6 +15,8 @@ FlagTrap::FlagTrap( std::string name ) : ClapTrap(name)
 	this->_attackDamage= 30;
 
 	std::cout << "FlagTrap string constructor called." << std::endl;
+	if(DEBUG)
+		std::cout << *this;
 }
 
 FlagTrap::FlagTrap( FlagTrap const & s ) : ClapTrap(s)
